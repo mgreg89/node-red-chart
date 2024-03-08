@@ -61,6 +61,7 @@ The command removes all the Kubernetes components associated with the chart and 
 | Key | Type | Default | Description |
 |-----|------|---------|-------------|
 | affinity | object | `{}` | The affinity constraint |
+| clusterDomain | string | `cluster.local` | The domain used for the cluster services. |
 | clusterRoleRules.enabled | bool | `false` | Enable custom rules for the application controller's ClusterRole resource default: false |
 | clusterRoleRules.rules | list | `[]` | List of custom rules for the application controller's ClusterRole resource default: [] |
 | createClusterRole | bool | `false` | Create a ClusterRole resource for the node-red pod. default: false |
