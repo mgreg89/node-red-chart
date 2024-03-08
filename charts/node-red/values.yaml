@@ -255,6 +255,9 @@ extraSidecars: []
 #    image: busybox
 #    command: ["/bin/sh", "-c", "echo hello from sidecar"]
 
+# If you use a different cluster domain than `cluster.local` you can set it here
+clusterDomain: cluster.local
+
 # -- Create a ClusterRole resource for the node-red pod. default: false
 createClusterRole: false
 

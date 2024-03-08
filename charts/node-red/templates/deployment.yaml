@@ -69,7 +69,7 @@ spec:
             value: /app/{{ .Values.sidecar.env.script }}
           {{- end }}
           - name: URL
-            value: {{ printf "http://%s.%s.svc.cluster.local:%d" (include "node-red.fullname" .) .Release.Namespace (.Values.service.port | int) }}
+            value: {{ printf "http://%s.%s.svc.%s:%d" (include "node-red.fullname" .) .Release.Namespace .Values.clusterDomain (.Values.service.port | int) }}
           {{ if .Values.sidecar.env.username }}
           - name: USERNAME
             value: {{ .Values.sidecar.env.username }}
